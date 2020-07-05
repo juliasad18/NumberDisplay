@@ -1,10 +1,10 @@
-package main.java.com.numberdisplay;
+package com.numberdisplay;
 
 import java.util.HashMap;
 
 public class NumberConverter {
 
-    public static void displayNumber (String number, DisplayNumber output) {
+    public static String[] displayNumber (String number) {
         String firstRowString = "";
         String secondRowString = "";
         String thirdRowString = "";
@@ -24,14 +24,13 @@ public class NumberConverter {
             secondRowString = builder2.append(" ").append(numberHashMap.get(2).toString()).toString();
             thirdRowString = builder3.append(" ").append(numberHashMap.get(3).toString()).toString();
 
-            //firstRowString = firstRowString + " " + numberHashMap.get(1).toString();
-            //secondRowString = secondRowString + " " + numberHashMap.get(2).toString();
-            //thirdRowString = thirdRowString + " " + numberHashMap.get(3).toString();
         }
 
-        output.outputToDisplay(firstRowString);
-        output.outputToDisplay(secondRowString);
-        output.outputToDisplay(thirdRowString);
+        System.out.println(firstRowString);
+        System.out.println(secondRowString);
+        System.out.println(thirdRowString);
+
+        return new String[] {firstRowString, secondRowString, thirdRowString};
 
     }
 

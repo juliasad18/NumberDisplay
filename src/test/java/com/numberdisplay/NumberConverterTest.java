@@ -1,19 +1,24 @@
-package test.java.com.numberdisplay;
+package com.numberdisplay;
 
-import main.java.com.numberdisplay.Number;
-import main.java.com.numberdisplay.NumberConverter;
+
+import org.junit.Test;
+
+import java.lang.reflect.Array;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class NumberConverterTest {
-    public static void main(String[] args) {
-        NumberConverterTest eeeem = new NumberConverterTest();
-        eeeem.displayNumberTest();
-    }
+    NumberConverter numberConverter = new NumberConverter();
+
+
+    @Test
     public void displayNumberTest() {
         Number testNumber = new Number("123");
-        VitalijsDesireMock printout = new VitalijsDesireMock();
-        NumberConverter.displayNumber(testNumber.getNumber(), printout);
-        System.out.println(printout.getLastResult());
+        String[] actualDisplay = numberConverter.displayNumber(testNumber.getNumber());
 
+        assertEquals(" ... ._. ._.", Array.get(actualDisplay, 0), "1st row is incorrect");
+        assertEquals(" ..| ._| ._|", Array.get(actualDisplay, 1), "2nd row is incorrect");
+        assertEquals(" ..| |_. ._|", Array.get(actualDisplay, 2), "3rd row is incorrect");
 
 
     }

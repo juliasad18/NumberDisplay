@@ -1,4 +1,4 @@
-package main.java.com.numberdisplay;
+package com.numberdisplay;
 
 public class Number {
     String number;
