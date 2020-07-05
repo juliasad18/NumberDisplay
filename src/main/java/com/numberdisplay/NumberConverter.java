@@ -26,10 +26,6 @@ public class NumberConverter {
 
         }
 
-        System.out.println(firstRowString);
-        System.out.println(secondRowString);
-        System.out.println(thirdRowString);
-
         return new String[] {firstRowString, secondRowString, thirdRowString};
 
     }
@@ -90,7 +86,6 @@ public class NumberConverter {
                 hashMap.put(3, "._|");
                 break;
         }
-
 
         return hashMap;
     }

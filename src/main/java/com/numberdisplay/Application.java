@@ -10,7 +10,12 @@ public class Application {
 
         while(true) {
             String inputNumber = in.nextLine();
-            NumberConverter.displayNumber(inputNumber);
+
+            String[] numberArray = NumberConverter.displayNumber(inputNumber);
+            for(String string : numberArray) {
+                System.out.println(string);
+            }
+
             System.out.println("Voulez-vous entrer un nouveau numéro? (Oui/Non)");
             String inputAnswer = in.nextLine();
             if (inputAnswer.equals("Non")) {
@@ -22,15 +27,6 @@ public class Application {
                 System.out.println("Considered as Yes :)");
                 System.out.println("Entrez le numéro: ");
             }
-
         }
-
-
-
-
-
-
-
-
     }
 }
