@@ -27,19 +27,19 @@ public class NumberMock implements INumber{
         return number;
     }
 
-    @Override
-    public boolean appendToDisplayedNumber(String firstRow, String secondRow, String thirdRow) {
-        this.firstRow = firstRow;
-        this.secondRow = secondRow;
-        this.thirdRow = thirdRow;
-        return true;
-    }
-
-    @Override
-    public void printDisplayedNumber() {
-        System.out.println(firstRow);
-        System.out.println(secondRow);
-        System.out.println(thirdRow);
-    }
+//    @Override
+//    public boolean appendToDisplayedNumber(String firstRow, String secondRow, String thirdRow) {
+//        this.firstRow = firstRow;
+//        this.secondRow = secondRow;
+//        this.thirdRow = thirdRow;
+//        return true;
+//    }
+//
+//    @Override
+//    public void printDisplayedNumber() {
+//        System.out.println(firstRow);
+//        System.out.println(secondRow);
+//        System.out.println(thirdRow);
+//    }
 
 }

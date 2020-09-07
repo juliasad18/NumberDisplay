@@ -15,7 +15,8 @@ public class Application {
 
             try {
                 Long start = System.currentTimeMillis();
-                NumberConverter.convertNumber(new Number(inputNumber));
+                String[] displayedNumberRows = NumberConverter.buildDisplayedNumber(new Number(inputNumber));
+                NumberConverter.printDisplayedNumber(displayedNumberRows);
                 System.out.println("Logging time to check performance --> NumberConverter.convertNumber() working time: " + (System.currentTimeMillis() - start) + " milliseconds.");
             } catch(NullPointerException e) {
                 Logger logger = Logger.getLogger(Number.class.getName());
