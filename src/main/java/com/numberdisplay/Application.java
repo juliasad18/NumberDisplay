@@ -5,6 +5,7 @@ import java.util.logging.Logger;
 
 public class Application {
     private static Scanner in = new Scanner(System.in);
+    private static Logger logger = Logger.getLogger(Number.class.getName());
 
     public static void main(String[] args) {
 
@@ -19,7 +20,6 @@ public class Application {
                 NumberConverter.printDisplayedNumber(displayedNumberRows);
                 System.out.println("Logging time to check performance --> NumberConverter.convertNumber() working time: " + (System.currentTimeMillis() - start) + " milliseconds.");
             } catch(NullPointerException e) {
-                Logger logger = Logger.getLogger(Number.class.getName());
                 logger.warning("Error message: " + e.toString());
                 System.out.println("Inserted value must be a number.");
             }
