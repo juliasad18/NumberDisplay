@@ -21,7 +21,7 @@ public class NumberConverter {
 
             for (int i = 0; i < newNumber.getNumber().length(); i++) {
                 int numberFromChar = Character.getNumericValue(newNumber.getNumber().charAt(i));
-                HashMap numberHashMap = numberVocabulary(numberFromChar);
+                HashMap<Integer, String> numberHashMap = numberVocabulary(numberFromChar);
 
                 firstRowString = builder1.append(" ").append(numberHashMap.get(1).toString()).toString();
                 secondRowString = builder2.append(" ").append(numberHashMap.get(2).toString()).toString();
@@ -39,8 +39,9 @@ public class NumberConverter {
         return array;
     }
 
-    public static void printDisplayedNumber(String[] rows) {
+    public static void printDisplayedNumber(String[] rows, INumber number) {
         for(String row : rows) {
+            number.addRowToArrayList(row);
             System.out.println(row);
         }
     }

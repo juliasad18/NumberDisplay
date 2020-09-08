@@ -15,9 +15,10 @@ public class Application {
             String inputNumber = in.nextLine();
 
             try {
-                Long start = System.currentTimeMillis();
-                String[] displayedNumberRows = NumberConverter.buildDisplayedNumber(new Number(inputNumber));
-                NumberConverter.printDisplayedNumber(displayedNumberRows);
+                long start = System.currentTimeMillis();
+                Number number = new Number(inputNumber);
+                String[] displayedNumberRows = NumberConverter.buildDisplayedNumber(number);
+                NumberConverter.printDisplayedNumber(displayedNumberRows, number);
                 System.out.println("Logging time to check performance --> NumberConverter.convertNumber() working time: " + (System.currentTimeMillis() - start) + " milliseconds.");
             } catch(NullPointerException e) {
                 logger.warning("Error message: " + e.toString());
